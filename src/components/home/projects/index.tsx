@@ -109,8 +109,8 @@ const Projects = () => {
   };
 
   return (
-    <div className="container pt-10 md:pt-28 pb-10 lg:px-8 font-dmSans">
-      <h2 className="text-4xl font-bold mb-4  text-[#2D3958] text-center">
+    <div className="container mt-24 pb-10 lg:px-8 font-dmSans">
+      <h2 className="text-4xl font-bold   text-[#2D3958] text-center">
         PROJECTS
       </h2>
 

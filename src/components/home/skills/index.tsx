@@ -10,6 +10,76 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
+// const companyLogos = [
+//   {
+//     src: "/images/skills/html.svg",
+//     alt: 'HTML',
+//     style: 'shadow-orange-500'
+//   },
+//   {
+//     src: "/images/skills/css-3-svgrepo-com.svg",
+//     alt: 'CSS',
+//     style: 'shadow-blue-400'
+//   },
+//   {
+//     src: "/images/skills/tailwind.svg",
+//     alt: 'Tailwind CSS',
+//     style: 'shadow-cyan-500'
+//   },
+//   {
+//     src: "/images/skills/bootstrap.svg",
+//     alt: 'Bootstrap',
+//     style: 'shadow-cyan-500'
+//   },
+//   {
+//     src: "/images/skills/javascript.svg",
+//     alt: 'JavaScript',
+//     style: 'shadow-yellow-400'
+//   },
+//   {
+//     src: "/images/skills/react-svgrepo-com.svg",
+//     alt: 'React',
+//     style: 'shadow-blue-400'
+//   },
+//   {
+//     src: "/images/skills/nextjs.svg",
+//     alt: 'Next js ',
+//     style: 'shadow-black'
+//   },
+//   {
+//     src: "/images/skills/git.svg",
+//     alt: 'Git',
+//     style: 'shadow-orange-500'
+//   },
+//   {
+//     src: "/images/skills/github.svg",
+//     alt: 'Github',
+//     style: 'shadow-black'
+//   },
+//   {
+//     src: "/images/skills/java.png",
+//     alt: 'java',
+//     style: 'shadow-yellow-500'
+//   },
+  // {
+  //   src: "/images/skills/dsa.png",
+  //   alt: 'DSA',
+  //   style: 'shadow-blue-400'
+  // },
+//   {
+//     src: "/images/skills/oops.jpg",
+//     alt: 'OPPs Concept',
+//     style: 'shadow-cyan-500'
+//   },
+//   {
+//     src: "/images/skills/postman.svg",
+//     alt: 'Postman',
+//     style: 'shadow-cyan-500'
+//   }
+// ];
+
+
+
 const companyLogos = [
   {
     src: "/images/skills/html.svg",
@@ -29,12 +99,18 @@ const companyLogos = [
   {
     src: "/images/skills/bootstrap.svg",
     alt: 'Bootstrap',
-    style: 'shadow-cyan-500'
+    style: 'shadow-[#563D7C]'
   },
   {
     src: "/images/skills/javascript.svg",
     alt: 'JavaScript',
     style: 'shadow-yellow-400'
+  },
+
+  {
+    src: "/images/skills/typescript.svg",
+    alt: 'TypeScript',
+    style: 'shadow-[#007ACC]'
   },
   {
     src: "/images/skills/react-svgrepo-com.svg",
@@ -52,29 +128,73 @@ const companyLogos = [
     style: 'shadow-orange-500'
   },
   {
+    src: "/images/skills/bitbucket.svg",
+    alt: 'Bitbucket',
+    style: 'shadow-[#0659D4]'
+  },
+
+
+  {
     src: "/images/skills/github.svg",
     alt: 'Github',
     style: 'shadow-black'
   },
   {
+    src: "/images/skills/vs-code.svg",
+    alt: 'VS Code',
+    style: 'shadow-[#2FADF0]'
+  },
+  {
+    src: "/images/skills/nodejs.svg",
+    alt: 'Node js',
+    style: 'shadow-black'
+  },
+
+  {
+    src: "/images/skills/express.svg",
+    alt: 'Express js',
+    style: 'shadow-black'
+  },
+
+
+  {
+    src: "/images/skills/mongodb.svg",
+    alt: 'Mongo DB',
+    style: 'shadow-[#439945]'
+  },
+
+  {
+    src: "/images/skills/sql.svg",
+    alt: 'SQL',
+    style: 'shadow-[#00BCF2]'
+  },
+
+  {
+    src: "/images/skills/mysql.svg",
+    alt: 'MySql',
+    style: 'shadow-[#5D87A1]'
+  },
+
+  // {
+  //   src: "/images/skills/redis.svg",
+  //   alt: 'Redis',
+  //   style: 'shadow-black'
+  // },
+
+  {
     src: "/images/skills/java.png",
     alt: 'java',
-    style: 'shadow-yellow-500'
+    style: 'shadow-[#4B38E2]'
   },
-  {
+   {
     src: "/images/skills/dsa.png",
     alt: 'DSA',
-    style: 'shadow-blue-400'
-  },
-  {
-    src: "/images/skills/oops.jpg",
-    alt: 'OPPs Concept',
-    style: 'shadow-cyan-500'
+    style: 'shadow-[#009AD3]'
   },
   {
     src: "/images/skills/postman.svg",
     alt: 'Postman',
-    style: 'shadow-cyan-500'
+    style: 'shadow-[#FF6C37]'
   }
 ];
 
@@ -84,7 +204,7 @@ const Skills = () => {
   return (
     <div className="container pt-10 ">
       <div className="container flex flex-col items-center justify-center text-center font-dmSans md:max-w-4xl mb-6 md:mb-14">
-        <h2 className="text-4xl font-bold mb-4  text-[#2D3958]">
+        <h2 className="md:text-4xl text-3xl font-bold mb-4  text-[#2D3958]">
           SKILLS
         </h2>
         <button
@@ -148,7 +268,7 @@ const Skills = () => {
           ))}
         </Swiper>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6  md:px-6">
           {companyLogos.map((logo, index) => (
             <div
               key={index}

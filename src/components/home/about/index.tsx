@@ -6,7 +6,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { FaDownload, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaDownload, FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa'
 import Image from "next/image"
 
 
@@ -28,6 +28,11 @@ const About = () => {
 
   const [showBio, setShowBio] = useState(false)
 
+  const handleCvDownload = () => {
+    const pdfPath = "/images/resume/amitResume.pdf";
+    window.open(pdfPath, '_blank');
+  };
+
   return (
     <section id="about" className=" my-16 bg-gradient-to-br from-background to-secondary/30 overflow-hidden">
 
@@ -37,9 +42,9 @@ const About = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="container w-10/12 my-12  flex flex-col items-center justify-center text-center font-bold font-dmSans px-4"
+        className="container md:w-10/12 my-12  flex flex-col items-center justify-center text-center font-bold font-dmSans md:px-4"
       >
-        <h2 className="text-4xl font-bold mb-4  text-[#2D3958] ">ABOUT ME</h2>
+        <h2 className="md:text-4xl text-3xl font-bold mb-4  text-[#2D3958] ">ABOUT ME</h2>
         <AnimatePresence mode="wait">
           {showBio ? (
             <motion.p
@@ -126,7 +131,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className=" ml-12 "
+              className=" md:ml-12 "
             >
               <ul className="space-y-6 ">
                 <li className="flex items-start space-x-2 text-[#2D3958]">
@@ -173,13 +178,15 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex flex-wrap gap-4 ml-12"
+              className="flex flex-wrap gap-4 md:ml-12"
             >
-              <Button className="bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 ">
+              <Button onClick={handleCvDownload} className="bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 ">
                 <FaDownload className="mr-2 h-4 w-4" />
                 Download CV
               </Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+
+              
+              {/* <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <FaEnvelope className="mr-2 h-4 w-4" />
                 Contact Me
               </Button>
@@ -188,7 +195,7 @@ const About = () => {
               </Button>
               <Button variant="ghost" size="icon" className="text-primary hover:bg-primary/20">
                 <FaLinkedin className="h-5 w-5" />
-              </Button>
+              </Button> */}
             </motion.div>
           </div>
         </motion.div>

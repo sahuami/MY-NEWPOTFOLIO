@@ -109,7 +109,7 @@ const WorkExperience = () => {
 
   return (
     <section id="experiences" className=" container mt-24    ">
-      <div className="container px-4 mx-auto">
+      <div className="md:px-5 mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -118,7 +118,7 @@ const WorkExperience = () => {
           className="flex flex-col items-center"
         >
           <motion.div variants={cardVariants} className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4  text-[#2D3958] text-center">Work Experience</h2>
+            <h2 className="md:text-4xl text-3xl font-bold mb-4  text-[#2D3958] text-center">Work Experience</h2>
             <p className="text-muted-foreground text-justify font-semibold">
               A selection of my recent professional roles where I&apos;ve grown my skills and worked on exciting projects.
             </p>
