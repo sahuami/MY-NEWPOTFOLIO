@@ -147,7 +147,7 @@ const companyLogos = [
   {
     src: "/images/skills/nodejs.svg",
     alt: 'Node js',
-    style: 'shadow-black'
+    style: 'shadow-green-700'
   },
 
   {

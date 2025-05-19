@@ -55,9 +55,18 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="text-muted-foreground text-justify "
             >
-              Hello, I&apos;m Amit sahu, a passionate Web Developer, specializing in Front-End development, and boast proficiency in java with DSA, OOPs concept, HTML, CSS, JavaScript, React.js and Node.js Currently a B.Tech final year Computer Science and Engineering student. I am deeply engaged in the dynamic field of web development. My expertise extends to modern web standards and best practices, allowing me to create robust and user-friendly interfaces.
 
-              As a Web Developer and fervent Tech Enthusiast, I am driven by the exploration of the boundless opportunities within the realm of Web Development. 🌐🚀 My passion lies in pushing the boundaries of innovation and continuously enhancing my skills. Obsessed with the notion of self-improvement, I am on the lookout for a platform that fosters growth and acceleration in the ever-evolving landscape of #WebDev and #JavaScript.
+
+
+              Hello, I&apos;m Amit sahu, a passionate and detail-oriented Full Stack Web Developer with a strong academic foundation in Computer Science. I completed my BTech in Computer Science (2020–2024) from J.C. Bose University, Faridabad, <br /><br />
+
+              I specialize in modern web development technologies including JavaScript, React.js, Next.js, Node.js, Express.js, MongoDB, SQL,  and more. With hands-on experience in both frontend and backend development, I have contributed to real-world projects involving CMS platforms, API development, and role-based access control systems.<br /><br />
+
+              currently working at Technovatic Solutions (BytesBrick InfoSystems OPC Pvt Ltd). I specialize in building scalable and dynamic web applications using modern technologies like React.js, Next.js, TypeScript, Tailwind CSS, and Node.js etc.
+              <br /><br />
+              Over the past few days, I’ve contributed to a variety of high-impact projects, including the Rider Music Festival CMS (RedFM), Escorts Kubota Limited website, and the SatyaHindi News CMS. My experience spans across CMS development, access control systems, dynamic routing, content scheduling, real-time updates, and integrating social media embeds.
+              <br /><br />
+              I enjoy creating intuitive user interfaces and solving complex backend challenges. I’ve also worked on internal SaaS tools and company websites, demonstrating versatility and commitment to delivering clean, maintainable code across the stack.
             </motion.p>
           ) : (
             <motion.p
@@ -68,7 +77,7 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="text-muted-foreground"
             >
-              Hello, I&apos;m Amit sahu, a passionate Web Developer, specializing in Front-End development...
+              Hello, I&apos;m a Full-Stack Developer with a strong focus on frontend and backend technologies....
             </motion.p>
           )}
         </AnimatePresence>
@@ -185,7 +194,7 @@ const About = () => {
                 Download CV
               </Button>
 
-              
+
               {/* <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <FaEnvelope className="mr-2 h-4 w-4" />
                 Contact Me
