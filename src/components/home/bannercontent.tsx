@@ -67,7 +67,7 @@ const BannerContent = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <Button className="md:text-lg bg-blue-500 text-white font-semibold px-7 py-6  rounded-md hover:text-blue-600 hover:bg-white ">
-                  LET’S TALK
+                  LET’S CONNECT
                 </Button>
               </motion.div>
             </div>

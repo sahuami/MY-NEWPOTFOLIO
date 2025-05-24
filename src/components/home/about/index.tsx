@@ -64,7 +64,7 @@ const About = () => {
 
               currently working at Technovatic Solutions (BytesBrick InfoSystems OPC Pvt Ltd). I specialize in building scalable and dynamic web applications using modern technologies like React.js, Next.js, TypeScript, Tailwind CSS, and Node.js etc.
               <br /><br />
-              Over the past few days, I’ve contributed to a variety of high-impact projects, including the Rider Music Festival CMS (RedFM), Escorts Kubota Limited website, and the SatyaHindi News CMS. My experience spans across CMS development, access control systems, dynamic routing, content scheduling, real-time updates, and integrating social media embeds.
+              Over the past few months, I’ve contributed to a variety of high-impact projects, including the Rider Music Festival CMS (RedFM), Escorts Kubota Limited website, and the SatyaHindi News CMS. My experience spans across CMS development, access control systems, dynamic routing, content scheduling, real-time updates, and integrating social media embeds.
               <br /><br />
               I enjoy creating intuitive user interfaces and solving complex backend challenges. I’ve also worked on internal SaaS tools and company websites, demonstrating versatility and commitment to delivering clean, maintainable code across the stack.
             </motion.p>

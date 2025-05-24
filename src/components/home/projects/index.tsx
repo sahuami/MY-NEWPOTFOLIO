@@ -7,67 +7,69 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import { Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const testimonials = [
+const details = [
   {
-    name: "Rajendra Parida",
-    title: "Sr.Manager - DP | Mindforce Research",
-    image: "/images/client/Rajendra.png",
-    testimony:
-      "I have known Technovatic Solutions for over a decade, and their dedication, expertise, and professionalism are truly remarkable. Their deep knowledge in the domain is the icing on the cake— they have an extraordinary ability to make the impossible possible. I am always confident and happy to take their services, knowing that they consistently deliver exceptional results with precision and efficiency.",
-  },
-  {
-    name: "Kaustubh Bahuguna",
-    title: "Corporate Brand Strategy | RedFM",
-    image: "/images/client/Kaustubh.png",
-    testimony: `I've had the pleasure of working with Technovatic Solutions on a range of web products, from the engaging Quiz India Movement and the spirited College Ke Tashanbaaz to the dynamic Riders Music Festival. Their team not only brings amazing ideas to the table but also demonstrates unmatched expertise in solving any product requirement, no matter how complex. Technovatic Solutions is more than just a developer-they're a creative and technical partner who ensures every project stands out. Highly recommended for anyone looking for excellence and innovation!`,
-  },
-  {
-    name: "Nalini Kher",
-    title: "Red FM",
-    image: "/images/client/Nalini-Kher.jpeg",
-    testimony: `Thank you, Team Technovatic Solutions! Each one of you has been a guiding light in building a better ecosystem and dynamics for website development, server maintenance, and UI/UX journeys with every project's progress.
-    We have worked on many milestones together, including Quiz India Movement, Bhangra Premier League, South Side Story, College Ke Tashanbaaz, and many more!
+    name: "SatyaHindi News (CMS)",
+    title: "Camword Private Limited",
+    image: "/images/projectLogo/satyaHindi.jpg",
+    detail: "This project is being developed using React.js, TypeScript, Tailwind CSS, Ant Design, Node.js (Express.js), and MySQL. It is currently under active development, with ongoing enhancements and feature rollouts.",
+    points: [
+      "Authentication & Access Control: Designed and implemented a secure authentication system, ensuring smooth and protected user access. Incorporated dynamic routing for seamless navigation and developed a Role-Based Access Control (RBAC) system to manage module-level permissions based on user roles.",
+      "News & Article Management: Built a comprehensive content management module supporting article creation, editing, and scheduling (auto-publish/unpublish). Developed a dedicated election news section for handling specialized content. Integrated support for rich embeds from platforms like Twitter, Instagram, and Facebook, along with a reusable image management system featuring captions and cross-post reuse, streamlining editorial workflows.",
+      "Modular CMS Enhancements: Contributed to multiple CMS sections to improve content handling efficiency, editorial flexibility, and overall system performance. Regularly involved in feature development, code optimization, and UX improvements to support evolving platform requirements.",
 
-    Team Technovatic Solutions, you have been the strongest pillar and a constant support for Red FM. Thank you, Team.
+    ],
+    href: "https://www.satyahindi.com/"
+  },
+  {
+    name: "Escorts Kubota Limited (Website)",
+    title: "",
+    image: "/images/projectLogo/ekl.png",
+    detail: "  This is a dynamic web application and i worked within the International Business(IB) section and this project created by  using Next.js, TypeScript, Tailwind CSS, Ant Design, Express.js, and MySQL.This system enables products and features to be displayed based on the selected country, ensuring localized user experience.",
+    points: [
+      "Implemented an advanced, real - time filtration mechanism that updates product listings instantly when the user selects a different country, enhancing interactivity and relevance.",
+      "Created and organized multiple product categories such as Farmtrac and Powertrac to improve product discoverability and navigation.",
+      "Designed and integrated all key pages with a focus on usability and clarity, resulting in an intuitive interface that delivers relevant and timely information to users."
+    ],
+    href: "https://www.escortskubota.com/"
+  },
 
-    High Spirits!
-    Bajaate Raho…!`,
-  },
   {
-    name: "Qamar Waheed Naqvi",
-    title: "Director | Satya Hindi",
-    image: "/images/client/qw-naqvi-2.jpg",
-    testimony: `Working with Technovatic Solutions is an absolute pleasure. Impressed with their team's attention to details, technical skills, and professional approach towards our timelines & processes. We highly recommend working with them.`,
+    name: "Rider Music Festival (CMS)",
+    title: "Red FM 93.5",
+    image: "/images/projectLogo/rmf.jpg",
+    detail: " This is a robust web application using React.js, Tailwind CSS, TypeScript, Ant Design, Node.js with Express.js, and MySQL to manage festival events efficiently.",
+    points: [
+      "Architected and maintained a dynamic CMS to handle festival-related content including artist profiles, event schedules, and seasonal greetings, streamlining content updates and management.",
+      "Engineered highly responsive and reusable UI components using Ant Design, while implementing advanced performance optimizations such as lazy loading and code splitting to enhance user experience.",
+      "Seamlessly integrated backend APIs to deliver real-time data on artist information, event timelines, and user engagement metrics, ensuring up-to-date and interactive content presentation.",
+      "Employed dynamic routing and sophisticated state management strategies for smooth navigation and responsive interactions across the application.",
+      "Designed and optimized a mobile-first, intuitive user interface that guarantees seamless and consistent performance across devices of all sizes."
+    ],
+    href: "https://www.ridersmusicfestival.com/"
   },
-  {
-    name: "Virendra Shekhawat",
-    title: "Founder | Delhi Photography Club",
-    image: "/images/client/vr.jpg",
-    testimony: `I've known the team at Technovatic Solutions for several years now, and we started with business collaboration. Over time, we've become close partners. The team is my go-to when it comes to technology, and they're one of the very few groups I can trust to handle any tech task. I can confidently assign them any project, knowing it will be executed flawlessly, without disrupting our existing setup.
+  // {
+  //   name: "Qamar Waheed Naqvi",
+  //   title: "Director | Satya Hindi",
+  //   image: "/images/client/qw-naqvi-2.jpg",
+  //   detail: `Working with Technovatic Solutions is an absolute pleasure. Impressed with their team's attention to details, technical skills, and professional approach towards our timelines & processes. We highly recommend working with them.`,
+  // },
+  // {
+  //   name: "Virendra Shekhawat",
+  //   title: "Founder | Delhi Photography Club",
+  //   image: "/images/client/vr.jpg",
+  //   detail: `I've known the team at Technovatic Solutions for several years now, and we started with business collaboration. Over time, we've become close partners. The team is my go-to when it comes to technology, and they're one of the very few groups I can trust to handle any tech task. I can confidently assign them any project, knowing it will be executed flawlessly, without disrupting our existing setup.
 
-    Their expertise in cutting-edge tech solutions has consistently impressed me. As the founder of Delhi Photography Club and a former Senior Product Manager for big brands like Amar Ujala, I've worked with many teams, but the professionalism and intelligence of Technovatic Solutions stand out.`,
-  },
-  {
-    name: "Abhijit Das ",
-    title: "Founder & CEO | Narrativ.Design",
-    image: "/images/client/abhijit.png",
-    testimony:
-      "Seasoned and trustworthy team for building technology applications with a human touch. Our most valued partner for co:creating customized martech roadmaps for our clients across markets.",
-  },
-  {
-    name: "Yashdeep Bali",
-    title: "Chief Digital Officer, And And Brand Partners",
-    image: "/images/client/yashdeep.jpeg",
-    testimony:
-      "Technovatic Solutions, highly professional web/app design and development company. Their team is very helpful in explaining the logic adopted for the development & ready to go that extra mile to bring out wonderful results. They are strategic & an engaged technology partner for us. Strongly recommended !",
-  },
+  //   Their expertise in cutting-edge tech solutions has consistently impressed me. As the founder of Delhi Photography Club and a former Senior Product Manager for big brands like Amar Ujala, I've worked with many teams, but the professionalism and intelligence of Technovatic Solutions stand out.`,
+  // },
+
 ];
 
 const Projects = () => {
-  const [expanded, setExpanded] = useState(Array(testimonials.length).fill(false));
-  const [needsReadMore, setNeedsReadMore] = useState(Array(testimonials.length).fill(false));
+  const [expanded, setExpanded] = useState(Array(details.length).fill(false));
+  const [needsReadMore, setNeedsReadMore] = useState(Array(details.length).fill(false));
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState<any>(null);
   const textRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -104,7 +106,7 @@ const Projects = () => {
   }, [modalOpen]);
 
   const handleReadMore = (index: number) => {
-    setActiveTestimonial(testimonials[index]);
+    setActiveTestimonial(details[index]);
     setModalOpen(true);
   };
 
@@ -130,35 +132,35 @@ const Projects = () => {
           1024: { slidesPerView: 3 },
         }}
       >
-        {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index} className="flex justify-center relative my-11">
-            <div className="relative flex flex-col items-center w-full">
-              <div className="testimonial-card relative rounded-[20px] md:rounded-[40px] border-2 border-gray-100 p-4 md:p-8 min-h-[320px] w-full max-w-full hover:shadow-xl transition-all duration-300 ease-in-out">
-                <div className="absolute top-6 right-5 text-gray-300">
-                  <Quote size={32} />
-                </div>
+        {details.map((testimonial, index) => (
 
-                <div className="flex items-center space-x-4">
-                  <div className="rounded-full w-20 h-20 flex-shrink-0">
+
+          <SwiperSlide key={index} className="flex justify-center relative my-11 px-2">
+            <div className="relative flex flex-col items-center w-full max-w-3xl">
+              <div className="testimonial-card bg-white relative rounded-3xl border border-gray-200 p-3 md:p-8 min-h-[300px] w-full shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out">
+
+                {/* Avatar & Info */}
+                <div className=" w-full flex items-center space-x-5">
+                  <div className="rounded-full w-20 h-20 flex-shrink-0 overflow-hidden border-2 border-gray-200 shadow-md">
                     <Image
-                      className="rounded-full object-cover"
+                      className="w-full h-full object-cover"
                       src={testimonial.image}
-                      alt={`Avatar of ${testimonial.name}`}
+                      alt="logo"
                       width={80}
                       height={80}
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                    <p className="text-gray-400 text-sm">{testimonial.title}</p>
+                    <h3 className="font-semibold text-md text-gray-800">{testimonial.name}</h3>
+                    <p className="w-full text-gray-500 text-sm">{testimonial.title}</p>
                   </div>
                 </div>
 
+                {/* detail Content */}
+
                 <div
-                  ref={(el:any) => (textRefs.current[index] = el)}
-                  className={`mt-4 text-md text-gray-500 transition-all overflow-hidden ${
-                    expanded[index] ? "max-h-[1000px]" : "line-clamp-5"
-                  }`}
+                  ref={(el: any) => (textRefs.current[index] = el)}
+                  className={`mt-6 text-base text-gray-600 transition-all overflow-hidden ${expanded[index] ? "max-h-[1000px]" : "line-clamp-5"}`}
                   style={{
                     display: "-webkit-box",
                     WebkitBoxOrient: "vertical",
@@ -166,36 +168,55 @@ const Projects = () => {
                     overflow: "hidden",
                   }}
                 >
-                  <p dangerouslySetInnerHTML={{ __html: testimonial.testimony }} />
+                  <p dangerouslySetInnerHTML={{ __html: testimonial.detail }} />
+                  {testimonial.points && testimonial.points.length > 0 && (
+                    <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-600">
+                      {testimonial.points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
-                {needsReadMore[index] && (
-                  <button
-                    className="mt-3 text-[#6785ff] focus:outline-none"
-                    onClick={() => handleReadMore(index)}
+
+                <div className="flex justify-between items-center mt-4">
+
+                  {/* Read More Button */}
+                  {needsReadMore[index] && (
+                    <button
+                      className=" text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+                      onClick={() => handleReadMore(index)}
+                    >
+                      {expanded[index] ? "Show Less" : "Read More..."}
+                    </button>
+                  )}
+
+                  <a
+                    href={testimonial.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    More...
-                  </button>
-                )}
+                    <Button className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-800 hover:to-blue-600">
+                      Visit site
+                    </Button>
+                  </a>
+
+
+                </div>
+
               </div>
             </div>
           </SwiperSlide>
+
         ))}
       </Swiper>
 
       {/* Modal */}
       {modalOpen && activeTestimonial && (
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300 ease-in-out">
-          <div className="bg-white max-w-2xl w-full rounded-2xl p-6 relative shadow-2xl max-h-[90vh] overflow-y-auto animate-fadeIn">
-            <button
-              className="absolute top-2 right-3 text-gray-400 hover:text-black text-2xl font-bold transition-colors"
-              onClick={() => setModalOpen(false)}
-              aria-label="Close Modal"
-            >
-              ×
-            </button>
+          <div className="bg-white max-w-2xl  w-full rounded-2xl px-6  relative shadow-2xl max-h-[90vh] hover:overflow-y-auto pb-2 animate-fadeIn">
 
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="sticky top-0 bg-white flex items-center space-x-4 mb-4 py-5">
               <div className="rounded-full w-16 h-16 flex-shrink-0 overflow-hidden">
                 <Image
                   className="rounded-full object-cover"
@@ -209,11 +230,27 @@ const Projects = () => {
                 <h3 className="font-bold text-xl text-[#2D3958]">{activeTestimonial.name}</h3>
                 <p className="text-sm text-gray-500">{activeTestimonial.title}</p>
               </div>
+              <button
+                className="absolute top-3 right-3 text-gray-400 hover:text-black text-2xl font-bold transition-colors"
+                onClick={() => setModalOpen(false)}
+                aria-label="Close Modal"
+              >
+                ×
+              </button>
+
             </div>
 
-            <div className="text-gray-700 text-[16px] leading-relaxed whitespace-pre-line">
-              <p dangerouslySetInnerHTML={{ __html: activeTestimonial.testimony }} />
+            <div className="text-gray-700 text-[16px] leading-relaxed whitespace-pre-line mb-2">
+              <p dangerouslySetInnerHTML={{ __html: activeTestimonial.detail }} />
+              {activeTestimonial.points && activeTestimonial.points.length > 0 && (
+                <ul className="list-disc pl-5 mt-2 space-y-2 text-sm">
+                  {activeTestimonial.points.map((point: string, i: number) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              )}
             </div>
+
           </div>
         </div>
       )}

@@ -5,7 +5,7 @@
 
 import React from "react";
 
-import { useState }  from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GitlabIcon as GitHub, Linkedin, Mail, Calendar, X } from "lucide-react";
@@ -43,40 +43,40 @@ type Experience = {
 const experiences: Experience[] = [
   {
     role: "Frontend Developer",
-    company: "Tech Solutions",
-    duration: "Jan 2022 - Present",
+    company: "Technovatics Solutions",
+    duration: "Nov 2024 - Present",
     description: "Developing cutting-edge web applications using Next.js, React, and Tailwind CSS.",
-    technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    companyLogo: "/placeholder.svg?height=48&width=48",
+    technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript", "javascript"],
+    companyLogo: "/images/logo.png",
     color: "from-blue-400 to-blue-600",
   },
-  {
-    role: "UI/UX Designer",
-    company: "Creative Agency",
-    duration: "Jun 2020 - Dec 2021",
-    description: "Designing interactive and user-friendly interfaces for web and mobile apps.",
-    technologies: ["Figma", "Adobe XD", "UI/UX Design"],
-    companyLogo: "/placeholder.svg?height=48&width=48",
-    color: "from-purple-400 to-purple-600",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Web Innovators",
-    duration: "Mar 2019 - May 2020",
-    description: "Worked on both front-end and back-end development of an e-commerce platform using Node.js, Express, and React.",
-    technologies: ["Node.js", "Express", "React", "MongoDB"],
-    companyLogo: "/placeholder.svg?height=48&width=48",
-    color: "from-green-400 to-green-600",
-  },
-  {
-    role: "Backend Developer",
-    company: "DataTech Solutions",
-    duration: "Jan 2018 - Feb 2019",
-    description: "Focused on developing and optimizing APIs and database architecture using Java and PostgreSQL.",
-    technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
-    companyLogo: "/placeholder.svg?height=48&width=48",
-    color: "from-red-400 to-red-600",
-  },
+  // {
+  //   role: "UI/UX Designer",
+  //   company: "Creative Agency",
+  //   duration: "Jun 2020 - Dec 2021",
+  //   description: "Designing interactive and user-friendly interfaces for web and mobile apps.",
+  //   technologies: ["Figma", "Adobe XD", "UI/UX Design"],
+  //   companyLogo: "/placeholder.svg?height=48&width=48",
+  //   color: "from-purple-400 to-purple-600",
+  // },
+  // {
+  //   role: "Full Stack Developer",
+  //   company: "Web Innovators",
+  //   duration: "Mar 2019 - May 2020",
+  //   description: "Worked on both front-end and back-end development of an e-commerce platform using Node.js, Express, and React.",
+  //   technologies: ["Node.js", "Express", "React", "MongoDB"],
+  //   companyLogo: "/placeholder.svg?height=48&width=48",
+  //   color: "from-green-400 to-green-600",
+  // },
+  // {
+  //   role: "Backend Developer",
+  //   company: "DataTech Solutions",
+  //   duration: "Jan 2018 - Feb 2019",
+  //   description: "Focused on developing and optimizing APIs and database architecture using Java and PostgreSQL.",
+  //   technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+  //   companyLogo: "/placeholder.svg?height=48&width=48",
+  //   color: "from-red-400 to-red-600",
+  // },
 ];
 
 // Animation variants
@@ -131,29 +131,30 @@ const WorkExperience = () => {
                 variants={cardVariants}
                 whileHover={{ scale: 1.05, rotate: [0, 1, -1, 0] }}
                 className="w-full max-w-sm"
-              >
+              > 
                 <Card
-                  className={`p-6 bg-gradient-to-br ${experience.color} shadow-xl rounded-lg h-full flex flex-col justify-between transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2`}
+                  className={`p-4 bg-gradient-to-br ${experience.color} shadow-xl rounded-lg h-full flex flex-col justify-between transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2`}
                   onClick={() => setSelectedExperience(experience)}
                 >
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 relative rounded-full overflow-hidden bg-white p-1">
+                      <div className="rounded-full w-16 h-16 flex-shrink-0 overflow-hidden border-2 border-gray-200 shadow-md">
                         <Image
+                          className="w-full h-full object-cover "
                           src={experience.companyLogo}
                           alt={experience.company}
-                          layout="fill"
-                          objectFit="cover"
+                          width={5}
+                          height={5}
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-white">{experience.role}</h3>
+                        <h3 className="text-lg font-semibold text-white">{experience.role}</h3>
                         <p className="text-sm text-gray-200">{experience.company}</p>
                         <p className="text-sm text-gray-200">{experience.duration}</p>
                       </div>
                     </div>
 
-                    <p className="text-sm text-gray-100 mb-4">{experience.description}</p>
+                    <p className="text-sm  text-gray-100 mb-4">{experience.description}</p>
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {experience.technologies.map((tech) => (
