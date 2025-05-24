@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <div className="mb-4 relative group w-[100px] h-[100px] overflow-hidden">
               <Image
-                src="/images/businessdev/AmitPhoto.png"
+                src="/images/AmitPhoto.png"
                 alt="Aniruddha Adak"
                 width={100}
                 height={100}
