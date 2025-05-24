@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="mb-4 relative group w-[100px] h-[100px] overflow-hidden">
               <Image
                 src="/images/AmitPhoto.png"
-                alt="Aniruddha Adak"
+                alt="AmitPhoto"
                 width={100}
                 height={100}
                 className="rounded-full w-full h-full object-cover border-4 border-primary shadow-lg transition-all duration-300"
