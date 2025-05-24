@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, MessageSquareDot, Phone, User } from "lucide-react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
+import emailjs from "emailjs-com";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +59,8 @@ const ContactSection = () => {
     }
   };
 
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -73,30 +76,27 @@ const ContactSection = () => {
     }
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/submit-contact-us`,
+      await emailjs.send(
+        "service_gldq1qr",
+        "template_qmauivg",
         {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
+          from_name: formData.name,
+          from_email: formData.email,
+          from_phone: formData.phone,
+          message: formData.message,
+        },
+        "Lm1J0Qe96fkgJJuaQ"
       );
 
-      const result = await response.json();
-      if (response.ok) {
-        toast.success(
-          "Thanks for contacting us. We will get back to you soon."
-        );
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        toast.error(result.message || "Data could not be submitted.");
-      }
+      toast.success("Thanks for contacting us. We will get back to you soon.");
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
       toast.error("An error occurred. Please try again later.");
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="max-h-svh overflow-auto">
@@ -136,20 +136,18 @@ const ContactSection = () => {
               value={formData.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full pr-10 p-1 border-b-2 peer pt-6 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${
-                nameError
+              className={`w-full pr-10 p-1 border-b-2 peer pt-6 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${nameError
                   ? "border-red-500"
                   : "border-gray-400 focus:border-[#101860]"
-              }`}
+                }`}
               required
             />
             <label
               htmlFor="name"
-              className={`absolute left-0 transition-all duration-300 ${
-                formData.name
+              className={`absolute left-0 transition-all duration-300 ${formData.name
                   ? "top-1 text-[#101860] text-sm"
                   : "top-3 text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-[#101860] peer-focus:text-sm"
-              }`}
+                }`}
             >
               Name
             </label>
@@ -167,20 +165,18 @@ const ContactSection = () => {
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full pr-10 p-1 border-b-2 peer pt-6 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${
-                emailError
+              className={`w-full pr-10 p-1 border-b-2 peer pt-6 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${emailError
                   ? "border-red-500"
                   : "border-gray-400 focus:border-[#101860]"
-              }`}
+                }`}
               required
             />
             <label
               htmlFor="email"
-              className={`absolute left-0 transition-all duration-300 ${
-                formData.email
+              className={`absolute left-0 transition-all duration-300 ${formData.email
                   ? "top-1 text-[#101860] text-sm"
                   : "top-3 text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-[#101860] peer-focus:text-sm"
-              }`}
+                }`}
             >
               Email
             </label>
@@ -201,22 +197,20 @@ const ContactSection = () => {
                 setFormData({ ...formData, phone: val });
               }}
               onBlur={handleBlur}
-              className={`w-full pr-10 p-1 border-b-2 peer pt-6 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${
-                phoneError
+              className={`w-full pr-10 p-1 border-b-2 peer pt-6 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${phoneError
                   ? "border-red-500"
                   : "border-gray-400 focus:border-[#101860]"
-              }`}
+                }`}
               pattern="[0-9]{10}"
               maxLength={10}
               required
             />
             <label
               htmlFor="phone"
-              className={`absolute left-0 transition-all duration-300 ${
-                formData.phone
+              className={`absolute left-0 transition-all duration-300 ${formData.phone
                   ? "top-1 text-[#101860] text-sm"
                   : "top-3 text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-[#101860] peer-focus:text-sm"
-              }`}
+                }`}
             >
               Phone No
             </label>
@@ -232,11 +226,10 @@ const ContactSection = () => {
               <div className="mb-2">
                 <label
                   htmlFor="message"
-                  className={`relative left-0 transition-all duration-300 ${
-                    formData.message
+                  className={`relative left-0 transition-all duration-300 ${formData.message
                       ? "top-1 text-[#101860] text-sm"
                       : "top-3 text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-[#101860] peer-focus:text-sm"
-                  }`}
+                    }`}
                 >
                   Message
                 </label>
@@ -254,11 +247,10 @@ const ContactSection = () => {
                   setFormData({ ...formData, message: val });
                 }}
                 onBlur={handleBlur}
-                className={`w-full pr-10 p-1 min-h-20 border-b-2 peer pt-1 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${
-                  messageError
+                className={`w-full pr-10 p-1 min-h-20 border-b-2 peer pt-1 bg-transparent focus:outline-none hover:bg-blue-50 transition-all duration-300 ${messageError
                     ? "border-red-500"
                     : "border-gray-400 focus:border-[#101860]"
-                }`}
+                  }`}
                 rows={2}
                 required
               />

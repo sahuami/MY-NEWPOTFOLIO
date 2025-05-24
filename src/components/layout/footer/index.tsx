@@ -1,89 +1,3 @@
-// import { Mail, MapPin } from "lucide-react";
-// import Image from "next/image";
-// import Link from "next/link";
-// import React from "react";
-// import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
-
-// const Footer = () => {
-//   return (
-//     <div className="bg-[#edebf9] py-8 md:py-8">
-//       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-4 border-b border-gray-300 pb-8 md:pb-20 font-dmSans">
-//         {/* Left Section - Logo and Description */}
-//         <div className="flex flex-col">
-//           <div className="relative w-40 h-20">
-//             <Image
-//               src="/logo.png"
-//               fill
-//               sizes="(max-width: 1900px) 100vw"
-//               alt="logo"
-//               className="object-contain"
-//             />
-//           </div>
-//           <p className="text-gray-700 text-sm max-w-lg">
-//             Creative-powered to fuel your growth goals. We build world-class
-//             digital products, software, and branding.
-//           </p>
-
-//         </div>
-
-//         {/* Right Section - Links */}
-//         <div className="grid grid-cols-1 gap-10">
-//           {/* Products */}
-//           <div className="hidden">
-//             <h3 className="font-semibold mb-5 text-gray-900">Products</h3>
-
-//             {/* some time for hidding */}
-//             <ul className="space-y-3 text-sm text-gray-700 hidden">
-//               <li>
-//                 <Link href="#">Unify App</Link>
-//               </li>
-//               <li>
-//                 <Link href="#">Page Builder</Link>
-//               </li>
-//               <li>
-//                 <Link href="#">Templates</Link>
-//               </li>
-//               <li>
-//                 <Link href="#">Pricing</Link>
-//               </li>
-//             </ul>
-//           </div>
-
-//           {/* Address */}
-
-//           <div>
-//             <p className="lg:mt-6 font-semibold text-gray-700">
-//               Registered Office
-//             </p>
-//             <p className="mt-2 text-sm text-gray-700 flex items-center">
-//               <span><MapPin className="w-5 h-5 text-gray-500 mr-2" /></span>
-//               New No 642, Old 29-A, F/P Floor, Zakir Nagar, Okhla, New Delhi -
-//               110025
-//             </p>
-
-//             <p className="lg:mt-6 mt-4 font-semibold text-gray-700">Corporate Office</p>
-//             <p className="mt-2 text-sm text-gray-700 flex items-center">
-//               <span><MapPin className="w-5 h-5 text-gray-500 mr-2" /></span>
-//               C-101, First Floor, Kundan Niwas, Hari Nagar, Ashram, New
-//               Delhi - 110014
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Bottom Section - Social Media and Copyright */}
-//       <div className="container mx-auto flex flex-col items-center justify-center text-center text-sm text-gray-600 font-dmSans mt-5">
-//         <p>
-//           Copyright &copy; {new Date().getFullYear()} Technovatic Solutions. All Rights Reserved.
-//         </p>
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default Footer;
-
 
 'use client'
 
@@ -118,11 +32,11 @@ const Footer = () => {
   
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/aniruddhaadak80", color: "text-purple-500", hoverBg: "hover:bg-purple-100/10" },
-    { icon: Linkedin, href: "https://linkedin.com/in/aniruddha-adak", color: "text-blue-500", hoverBg: "hover:bg-blue-100/10" },
-    { icon: Twitter, href: "https://twitter.com/aniruddha_adak", color: "text-sky-500", hoverBg: "hover:bg-sky-100/10" },
-    { icon: Mail, href: "mailto:aniruddhaadak80@gmail.com", color: "text-red-500", hoverBg: "hover:bg-red-100/10" },
-    { icon: Users, href: "#contributors", color: "text-green-500", hoverBg: "hover:bg-green-100/10" },
+    { icon: Github, href: "https://github.com/sahuami", color: "text-purple-500", hoverBg: "hover:bg-purple-100/10" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/amit-sahu-39387a262", color: "text-blue-500", hoverBg: "hover:bg-blue-100/10" },
+    { icon: Twitter, href: "https://twitter.com/sahuami2000", color: "text-sky-500", hoverBg: "hover:bg-sky-100/10" },
+    { icon: Mail, href: "mailto:sahuami2000@gmail.com", color: "text-red-500", hoverBg: "hover:bg-red-100/10" },
+    // { icon: Users, href: "#", color: "text-green-500", hoverBg: "hover:bg-green-100/10" },
   ]
 
   return (
@@ -144,7 +58,7 @@ const Footer = () => {
 
             {[
               `© ${new Date().getFullYear()}. All rights reserved.`,
-              "Created by ANIRUDDHA ADAK",
+              "Created by AMIT SAHU",
               "Phone: +917029155691",
               "Email: aniruddhaadak80@gmail.com"
             ].map((text, index) => (
